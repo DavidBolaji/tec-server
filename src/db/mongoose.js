@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
-
-mongoose.connect('mongodb://127.0.0.1:27017/tec-server-api', {
+let server;
+if (process.env.ENV === "local") {
+    server = process.env.MONGODB_URI_LOCAL
+} else {
+    server = process.env.MONGODB_URI_PROD
+}
+mongoose.connect(server, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     // useCreateIndex:true
