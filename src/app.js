@@ -7,7 +7,7 @@ require('dotenv').config();
 
 
 const app = express();
-const PORT = 5000 || process.env.PORT
+const PORT = process.env.PORT || 5000 
 const userRouter = require('./routes/user')
 const blogRouter = require('./routes/blog')
 const emailRouter = require('./routes/email')
