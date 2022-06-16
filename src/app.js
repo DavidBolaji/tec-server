@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 5000
 const userRouter = require('./routes/user')
 const blogRouter = require('./routes/blog')
 const emailRouter = require('./routes/email')
+const galleryRouter = require('./routes/gallery')
 const cors = require('cors')
 app.use(cors({
     origin: '*'
@@ -22,6 +23,7 @@ app.use(express.json());
 app.use(userRouter);
 app.use(blogRouter);
 app.use(emailRouter);
+app.use(galleryRouter);
 
 
 
