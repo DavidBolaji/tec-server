@@ -14,7 +14,7 @@ const emailRouter = require('./routes/email')
 const galleryRouter = require('./routes/gallery')
 const cors = require('cors')
 app.use(cors({
-    origin: 'https://create-react-7ktsmnopl-davidbolaji.vercel.app/'
+    origin: '*'
 }))
 
 // app use
