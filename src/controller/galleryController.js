@@ -4,7 +4,6 @@ const { cloudinary } = require("../utils/cloudinary");
 exports.store = async (req, res) => {
     try {
         const uploadRes = await cloudinary.uploader.upload(req.file.path, {
-          public_id: req.user._id,
           folder: "tec-client/gallery",
           format: "png",
         });
