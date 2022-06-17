@@ -8,7 +8,9 @@ exports.store = async (req, res) => {
           format: "png",
         });
 
-        const image = new Gallery({pic: uploadRes.url})
+        console.log(uploadRes);
+
+        const image = new Gallery({pic: uploadRes.secure_url})
         await image.save();
     
         res.status(201).send({image});

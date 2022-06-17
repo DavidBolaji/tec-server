@@ -23,7 +23,7 @@ exports.register = async (req, res) => {
       ],
     });
 
-    user.img = uploadRes.url;
+    user.img = uploadRes.secure_url;
 
     await user.save();
 
@@ -191,7 +191,7 @@ exports.update = async (req, res) => {
         }
       });
 
-      user[0]["img"] = uploadRes.url;
+      user[0]["img"] = uploadRes.secure_url;
 
       await user[0].save();
 

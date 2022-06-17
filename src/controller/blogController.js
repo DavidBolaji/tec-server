@@ -20,7 +20,7 @@ exports.create = async (req, res) => {
             ]
         });
 
-       blog.img = uploadRes.url
+       blog.img = uploadRes.secure_url
       
        await blog.save();
 
@@ -119,7 +119,7 @@ exports.updateBlog = async (req, res) => {
             ]
         });
 
-        blog.img = uploadRes.url;
+        blog.img = uploadRes.secure_url;
 
        }
 
